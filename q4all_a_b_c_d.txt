@@ -1,0 +1,122 @@
+** Test case : Q4 All parts-Construct examples lines 40 to 46, and 56 to 76.
+ONLINE question 4 (a)(b),(c) and (d): 
+For (a): Try introducing errors your self as described in the question paper
+For (b): AST creation to be done at implementation level 
+For (c): Read ONLINE ERRATA below and make the code syntactically correct, if exists any such errors. Populate symbol table accordingly
+For (d): create a simple test case after removing all errors for code denegration and compute results using C-like semantics of execution flow of the construct. 
+(correct the test case if any syntax error exists)
+
+ONLINE ERRATA (IMPORTANT for syntax of if-then-else) : 
+(1) constraint of minimum two statements is no longer valid as is shown below. The constraint is that, the then and the else parts (if else exists) have minimum ONE (and not TWO) statement. 
+(2) If the block of then or else parts have a single statement, then the start and end pair must be there syntactically, but if there are two or more statements in the then or else parts in a C-like manner, then user has to use the start and end pair to enclose the block.
+
+
+
+
+
+
+--------------------------------------------
+**
+<<module f1>>
+takes input[a: array[10..30] of integer, b:array[10..30] of integer, c:real];
+returns [m:boolean, n:integer];
+start
+	declare x,y, p: real;
+	declare k, y1: integer;
+	declare E: array[2..20] of integer;
+	declare Var3, Var4: array[100..150] of boolean;
+	get_value(y);
+	get_value(x);
+	declare A,B: array[4..10] of integer;
+	declare Var1, Var2: array[35..50] of real;
+	get_value(B);
+	use module function2 with parameters k, y1, Var4[102];  **Do not report this as an error because of redundant declaration of function2. This declaration has been genuinely needed in function var_demo_array**
+	declare D,C: array[10..30] of integer;
+	A:=B;
+	[ y1, m]:=use module var_demo_array with parameters k,E,x;	 **not an error**					 
+	C:=a;
+	[x, y1, m, k]:=use module function1 with parameters Var3, c, k, Var2, k;	**no error**			
+	D:=C;	
+	if (x<=y AND p>=x)
+	then start 
+		declare y: real;
+		x:=x+y;
+		y:=y-23.34;
+	end
+	endif               **ONLINE: if-then construct is syntactically correct - maintains minimumtwo statements**
+ 
+	[ k, m]:=use module var_demo_array with parameters k,B,p;       **ERROR: Input parameter type of B does not match with formal parameter type**						 
+	for (k in 15..40)
+	start
+		x:=x+k*y;				    **ERROR: Type mismatch error**
+		declare u, v:real;
+		declare M1: boolean;
+		declare int1: integer;
+		declare M2: array[-10..4]of boolean;
+		if (x<=y AND p>=x)
+		then 
+		start 
+			declare y: real; 	** ONLINE-scope of the variable y is 58-62**
+			x:=x+y;
+			y:=y-23.34;
+		end
+		else 	if p>=y    **ONLINE: here else part has only one statement so the start and end is not required
+			then 
+			start
+				declare NEW1, NEW2: integer; ** ONLINE-scope of the variables NEW1 and NEW2 is 65-69**
+				NEW1:= NEW2+21;
+				p:=y+10.8;
+			end 
+			else 
+			start 
+				declare NEW3, NEW4:integer;     ** ONLINE-scope of the variables NEW3 and NEW4 is 71-74**
+				NEW3:=NEW4+1;
+			end
+			endif               
+		endif       **ONLINE: if-then-else construct is syntactically correct - maintains minimum one statement**
+ 
+		[int1, M1, v]:= use module eval_two with parameters int1, Var2[40], E, u, M2;              **NEW: not an error**
+		u := y+c*34.2;
+		v:= u-c*p-20.5E+2;
+		[x, int1, m, k]:=use module function1 with parameters Var3, c, k, Var4, int1; **ERROR: Input parameter type of Var4 does not match with formal parameter type, also loop variable k is assigned a value**		
+		x:=x + u*v- u<=v;                             **ERROR: Type mismatch error**
+	end
+	x:=c+y;	
+	[p]:= use module function3 with parameters x,y;       **ERROR: module function3 is not defined**
+	C[18]:= a[18]+ b[18];
+	
+	A[5]:= B[6]- 10;
+	m:= A[5]< C[18] + A[11];			      **ERROR: element of array A is out of bound** 
+	y1:= 20*8-5;	
+end							      ** ERROR: Output parameter n is not assigned any value **
+
+<<<driver program>>>
+start
+	declare v_1_2_3, A:integer;
+	declare u1, u2, k:boolean;
+        A:=12;
+	declare p: real;
+	[k]:= use module function4 with parameters u1, u2;     
+	p:= 23.56;
+	get_value(v_1_2_3);							 		
+	declare B, C: array [2..20] of integer;
+	[ v_1_2_3, u1]:=use module var_demo_array with parameters A,B,p;		
+	[ v_1_2_3, k]:=use module var_demo_array with parameters A,B,p;	
+	declare a,b:integer;
+	a:= 5.89e-2;			        **ERROR: type mismatch error**
+	get_value(b);
+	declare value, q, r: real;
+	get_value(q);
+	r:= 23.67e+2;
+	value:= p+q*r-a*value; 			**ERROR: type mismatch error**
+	k:= true AND false OR q;		**ERROR: type mismatch error**
+	u1:= a<=b;
+	declare w: integer;			 
+	w:= 23+B[6];                                  
+	b:= a*25+100*C[1];		        **ERROR:element of array C is out of bound** 
+	declare D: array[20..40] of integer;			 
+	D:= value-q+r;				**ERROR: type mismatch error**
+	w:= w + 5;		 
+	B:= C;
+	C:= D;				        **ERROR: type mismatch error**        
+end

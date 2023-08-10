@@ -1,0 +1,443 @@
+|-T_DECLARE(declare) N_moduleDeclaration-|
+|-T_MODULE(module)-|
+|-T_ID(compute)-|
+|-T_SEMICOL(;)-|
+|-N_moduleDeclaration N_moduleDeclarations-|
+|-epsilon N_moduleDeclarations-|
+|-N_moduleDeclarations N_program-|
+|-epsilon N_otherModules-|
+|-T_DRIVERDEF(<<<) N_driverModule-|
+|-T_DRIVER(driver)-|
+|-T_PROGRAM(program)-|
+|-T_DRIVERENDDEF(>>>)-|
+|-T_START(start) N_moduleDef-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(var_1_) N_idList-|
+|-T_COMMA(,) N_n3-|
+|-T_ID(var_2_)-|
+|-T_COMMA(,) N_n3-|
+|-T_ID(var_3_)-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_dataType-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(R1_abc) N_idList-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_BOOLEAN(boolean) N_dataType-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(r2_ABC) N_idList-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_dataType-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(R3_abc) N_idList-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_REAL(real) N_dataType-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_GET_VALUE(get_value) N_ioStmt-|
+|-T_BO(()-|
+|-T_ID(var_1_)-|
+|-T_BC())-|
+|-T_SEMICOL(;)-|
+|-N_ioStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(var_2_) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_NUM(10) N_factor-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-epsilon N_n7-|
+|-N_arithmeticOrBooleanExpr N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(var_3_) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_MINUS(-) N_unary_op-|
+|-N_unary_op N_u-|
+|-T_BO(() N_new_NT-|
+|-T_NUM(6) N_factor-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-T_BC())-|
+|-N_u N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_SQBO([) N_optional-|
+|-T_ID(R1_abc) N_idList-|
+|-T_COMMA(,) N_n3-|
+|-T_ID(r2_ABC)-|
+|-T_COMMA(,) N_n3-|
+|-T_ID(R3_abc)-|
+|-epsilon N_n3-|
+|-T_SQBC(])-|
+|-T_ASSIGNOP(:=)-|
+|-N_optional N_moduleReuseStmt-|
+|-T_USE(use)-|
+|-T_MODULE(module)-|
+|-T_ID(compute)-|
+|-T_WITH(with)-|
+|-T_PARAMETERS(parameters)-|
+|-epsilon N_sign-|
+|-N_sign N_actual_para_list-|
+|-T_ID(var_1_) N_K-|
+|-epsilon N_n_11-|
+|-T_COMMA(,) N_append_para_list-|
+|-epsilon N_sign-|
+|-T_ID(var_2_) N_K-|
+|-epsilon N_n_11-|
+|-T_COMMA(,) N_append_para_list-|
+|-epsilon N_sign-|
+|-T_ID(var_34) N_K-|
+|-epsilon N_n_11-|
+|-epsilon N_append_para_list-|
+|-T_SEMICOL(;)-|
+|-N_moduleReuseStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-epsilon N_statements-|
+|-T_END(end)-|
+|-T_DEF(<<) N_module-|
+|-T_MODULE(module)-|
+|-T_ID(compute)-|
+|-T_ENDDEF(>>)-|
+|-T_TAKES(takes)-|
+|-T_INPUT(input)-|
+|-T_SQBO([)-|
+|-T_ID(a) N_input_plist-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_dataType-|
+|-T_COMMA(,) N_n1-|
+|-T_ID(b)-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_dataType-|
+|-T_COMMA(,) N_n1-|
+|-T_ID(c)-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_dataType-|
+|-epsilon N_n1-|
+|-T_SQBC(])-|
+|-T_SEMICOL(;)-|
+|-T_RETURNS(returns) N_ret-|
+|-T_SQBO([)-|
+|-T_ID(res_1) N_output_plist-|
+|-T_COLON(:)-|
+|-T_BOOLEAN(boolean) N_type-|
+|-T_COMMA(,) N_n2-|
+|-T_ID(res_2_a)-|
+|-T_COLON(:)-|
+|-T_INTEGER(integer) N_type-|
+|-T_COMMA(,) N_n2-|
+|-T_ID(res_2__b)-|
+|-T_COLON(:)-|
+|-T_REAL(real) N_type-|
+|-epsilon N_n2-|
+|-T_SQBC(])-|
+|-T_SEMICOL(;)-|
+|-T_START(start) N_moduleDef-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(p) N_idList-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_ARRAY(array) N_dataType-|
+|-T_SQBO([)-|
+|-epsilon N_sign-|
+|-N_sign N_index_arr-|
+|-T_NUM(2) N_new_index-|
+|-N_index_arr N_range_arrays-|
+|-T_RANGEOP(..)-|
+|-epsilon N_sign-|
+|-N_sign N_index_arr-|
+|-T_NUM(20) N_new_index-|
+|-T_SQBC(])-|
+|-T_OF(of)-|
+|-T_INTEGER(integer) N_type-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_DECLARE(declare) N_declareStmt-|
+|-T_ID(b) N_idList-|
+|-epsilon N_n3-|
+|-T_COLON(:)-|
+|-T_BOOLEAN(boolean) N_dataType-|
+|-T_SEMICOL(;)-|
+|-N_declareStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(res_2_a) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_MINUS(-) N_unary_op-|
+|-N_unary_op N_u-|
+|-T_BO(() N_new_NT-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-T_MUL(*) N_op2-|
+|-N_op2 N_n5-|
+|-T_ID(b) N_factor-|
+|-epsilon N_n_11-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-T_MINUS(-) N_op1-|
+|-N_op1 N_n4-|
+|-T_ID(c) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-T_DIV(/) N_op2-|
+|-N_op2 N_n5-|
+|-T_NUM(5) N_factor-|
+|-epsilon N_n5-|
+|-epsilon N_n4-|
+|-T_BC())-|
+|-N_u N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(res_2__b) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_BO(() N_factor-|
+|-T_BO(() N_factor-|
+|-T_ID(res_2_a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-T_PLUS(+) N_op1-|
+|-N_op1 N_n4-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-epsilon N_n7-|
+|-T_BC())-|
+|-N_factor N_term-|
+|-T_MUL(*) N_op2-|
+|-N_op2 N_n5-|
+|-T_NUM(12) N_factor-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-T_PLUS(+) N_op1-|
+|-N_op1 N_n4-|
+|-T_RNUM(22.34E-2) N_factor-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-epsilon N_n7-|
+|-T_BC())-|
+|-N_factor N_term-|
+|-T_DIV(/) N_op2-|
+|-N_op2 N_n5-|
+|-T_NUM(13) N_factor-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-epsilon N_n7-|
+|-N_arithmeticOrBooleanExpr N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(b) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_LE(<=) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_ID(b) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-T_AND(AND) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_ID(c) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_GE(>=) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-T_OR(OR) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_LT(<) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_NUM(0) N_factor-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-T_AND(AND) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_FALSE(false) N_boolConstt-|
+|-N_boolConstt N_anyTerm-|
+|-epsilon N_n7-|
+|-N_arithmeticOrBooleanExpr N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_ID(res_1) N_assignmentStmt-|
+|-T_ASSIGNOP(:=) N_lvalueIDStmt-|
+|-T_BO(() N_factor-|
+|-T_TRUE(true) N_boolConstt-|
+|-N_boolConstt N_anyTerm-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-T_AND(AND) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_ID(c) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_EQ(==) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_ID(b) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-epsilon N_n7-|
+|-T_BC())-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-T_OR(OR) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_BO(() N_factor-|
+|-T_ID(b) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_GT(>) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_ID(p) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-T_AND(AND) N_logicalOp-|
+|-N_logicalOp N_n7-|
+|-T_BO(() N_factor-|
+|-T_ID(a) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-T_LE(<=) N_relationalOp-|
+|-N_relationalOp N_n8-|
+|-T_ID(c) N_factor-|
+|-epsilon N_n_11-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_anyTerm N_arithmeticOrBooleanExpr-|
+|-epsilon N_n7-|
+|-T_BC())-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-epsilon N_n7-|
+|-T_BC())-|
+|-N_factor N_term-|
+|-epsilon N_n5-|
+|-N_term N_arithmeticExpr-|
+|-epsilon N_n4-|
+|-N_arithmeticExpr N_anyTerm-|
+|-epsilon N_n8-|
+|-epsilon N_n7-|
+|-N_arithmeticOrBooleanExpr N_expression-|
+|-T_SEMICOL(;)-|
+|-N_lvalueIDStmt N_whichStmt-|
+|-N_assignmentStmt N_simpleStmt-|
+|-N_simpleStmt N_statement-|
+|-N_statement N_statements-|
+|-T_PRINT(print) N_ioStmt-|
+|-T_BO(()-|
+|-T_ID(res_1) N_var_print-|
+|-epsilon N_p1-|
+|-T_BC())-|
+|-T_SEMICOL(;)-|
+|-N_ioStmt N_statement-|
+|-N_statement N_statements-|
+|-epsilon N_statements-|
+|-T_END(end)-|
+|-N_module N_otherModules-|
+|-epsilon N_otherModules-|
